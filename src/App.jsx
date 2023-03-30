@@ -8,6 +8,7 @@ import Jobinfo from './Jobinfo';
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [jobs, setJobs] = useState([]);
+  const [currentItem, setCurrentItem] = useState(0);
 
   const url = 'https://course-api.com/react-tabs-project';
 
@@ -25,7 +26,7 @@ function App() {
 
   if(isLoading){
     return(
-      <div>
+      <div className='loader'>
         <h1>Loading...</h1>
       </div>
     )
@@ -33,7 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <Jobinfo jobs={jobs} />
+      <BtnContainer jobs={jobs} currentItem={currentItem} setCurrentItem={setCurrentItem} />
+      <Jobinfo jobs={jobs} currentItem={currentItem}/>
     </div>
   )
 }
