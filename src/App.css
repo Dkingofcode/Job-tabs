@@ -5,3 +5,52 @@
   box-sizing: border-box;
 }
 
+.jobs-center{
+  width: 80vw;
+  margin: 5rem auto;
+  max-width: var(--max-width);
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+}
+
+.job-company{
+  text-transform: uppercase;
+  color: black;
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+
+}
+
+.job-date{
+  color: gray;
+  margin-bottom: 2rem;
+}
+
+.job-desc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

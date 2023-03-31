@@ -1,19 +1,23 @@
-import React from 'react'
-import Duties from './Duties'
+import React from 'react';
+import Duties from './Duties';
 
 
-const Jobinfo = ({jobs, currentItem }) => {
+const JobInfo = ({ jobs, currentItem }) => {
+  console.log(jobs);
 
- const { company, dates, duties, id, title } = jobs[currentItem];
-  return (
-    <article key={id} className='job-description'>
-      <h2>{title}</h2>
-      <span>{company}</span>
-      <p>{dates}</p>
-      <Duties duties={duties}/>
-    </article>
-       );
+     const { company, dates, duties,  title } = jobs[0];
 
-  }
+     return (
+      <div>
+      <article className='job-description'>
+        <h2>{title}</h2>
+        <span>{dates}</span>
+        <p>{company}</p>
+        <Duties duties={duties}/>
+      </article>
+      </div>
+         );
+  
+} 
 
-export default Jobinfo;
+ export default JobInfo;
